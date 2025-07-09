@@ -1,0 +1,1549 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Constant APPPATH not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: app/Config/Autoload.php
+
+		-
+			message: '#^Property Config\\Autoload\:\:\$psr4 \(array\<string, list\<string\>\|string\>\) does not accept default value of type array\{App\: mixed\}\.$#'
+			identifier: property.defaultValue
+			count: 1
+			path: app/Config/Autoload.php
+
+		-
+			message: '#^Binary operation "\." between mixed and ''cache/'' results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: app/Config/Cache.php
+
+		-
+			message: '#^Constant WRITEPATH not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: app/Config/Cache.php
+
+		-
+			message: '#^Binary operation "\." between mixed and ''vendor/autoload\.php'' results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: app/Config/Constants.php
+
+		-
+			message: '#^Constant ROOTPATH not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: app/Config/Constants.php
+
+		-
+			message: '#^Binary operation "\." between mixed and ''Database'' results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: app/Config/Database.php
+
+		-
+			message: '#^Constant APPPATH not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: app/Config/Database.php
+
+		-
+			message: '#^Constant ENVIRONMENT not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: app/Config/Database.php
+
+		-
+			message: '#^Call to method run\(\) of internal class CodeIgniter\\HotReloader\\HotReloader from outside its root namespace CodeIgniter\.$#'
+			identifier: method.internalClass
+			count: 1
+			path: app/Config/Events.php
+
+		-
+			message: '#^Cannot call method get\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Config/Events.php
+
+		-
+			message: '#^Cannot call method respond\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Config/Events.php
+
+		-
+			message: '#^Constant ENVIRONMENT not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: app/Config/Events.php
+
+		-
+			message: '#^Function is_cli not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/Config/Events.php
+
+		-
+			message: '#^Function service not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: app/Config/Events.php
+
+		-
+			message: '#^Instantiation of internal class CodeIgniter\\HotReloader\\HotReloader\.$#'
+			identifier: new.internalClass
+			count: 1
+			path: app/Config/Events.php
+
+		-
+			message: '#^Left side of && is always true\.$#'
+			identifier: booleanAnd.leftAlwaysTrue
+			count: 1
+			path: app/Config/Events.php
+
+		-
+			message: '#^Binary operation "\." between mixed and ''Views/errors'' results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: app/Config/Exceptions.php
+
+		-
+			message: '#^Constant APPPATH not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: app/Config/Exceptions.php
+
+		-
+			message: '#^Property Config\\Kint\:\:\$plugins has unknown class Kint\\Parser\\ConstructablePluginInterface as its type\.$#'
+			identifier: class.notFound
+			count: 2
+			path: app/Config/Kint.php
+
+		-
+			message: '#^Property Config\\Kint\:\:\$richObjectPlugins has unknown class Kint\\Renderer\\Rich\\ValuePluginInterface as its type\.$#'
+			identifier: class.notFound
+			count: 1
+			path: app/Config/Kint.php
+
+		-
+			message: '#^Property Config\\Kint\:\:\$richTabPlugins has unknown class Kint\\Renderer\\Rich\\TabPluginInterface as its type\.$#'
+			identifier: class.notFound
+			count: 1
+			path: app/Config/Kint.php
+
+		-
+			message: '#^Constant ENVIRONMENT not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: app/Config/Logger.php
+
+		-
+			message: '#^Constant FCPATH not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: app/Config/Publisher.php
+
+		-
+			message: '#^Constant ROOTPATH not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: app/Config/Publisher.php
+
+		-
+			message: '#^Property Config\\Publisher\:\:\$restrictions \(array\<string, string\>\) does not accept default value of type array\<string\>\.$#'
+			identifier: property.defaultValue
+			count: 1
+			path: app/Config/Publisher.php
+
+		-
+			message: '#^Cannot call method get\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 3
+			path: app/Config/Routes.php
+
+		-
+			message: '#^Cannot call method post\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Config/Routes.php
+
+		-
+			message: '#^Cannot call method resource\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 3
+			path: app/Config/Routes.php
+
+		-
+			message: '#^Binary operation "\." between mixed and ''Config/Routes\.php'' results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: app/Config/Routing.php
+
+		-
+			message: '#^Constant APPPATH not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: app/Config/Routing.php
+
+		-
+			message: '#^Constant ENVIRONMENT not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: app/Config/Security.php
+
+		-
+			message: '#^Binary operation "\." between mixed and ''session'' results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: app/Config/Session.php
+
+		-
+			message: '#^Constant WRITEPATH not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: app/Config/Session.php
+
+		-
+			message: '#^Binary operation "\." between mixed and ''Debug/Toolbar/Views/'' results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: app/Config/Toolbar.php
+
+		-
+			message: '#^Constant SYSTEMPATH not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: app/Config/Toolbar.php
+
+		-
+			message: '#^Cannot access offset ''created_at'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: app/Controllers/Api/HealthCheck.php
+
+		-
+			message: '#^Cannot access offset ''error_message'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: app/Controllers/Api/HealthCheck.php
+
+		-
+			message: '#^Cannot access offset ''health_status'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: app/Controllers/Api/HealthCheck.php
+
+		-
+			message: '#^Cannot access offset ''id'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: app/Controllers/Api/HealthCheck.php
+
+		-
+			message: '#^Cannot access offset ''last_check'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: app/Controllers/Api/HealthCheck.php
+
+		-
+			message: '#^Cannot access offset ''project_id'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: app/Controllers/Api/HealthCheck.php
+
+		-
+			message: '#^Cannot access offset ''response_time'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: app/Controllers/Api/HealthCheck.php
+
+		-
+			message: '#^Cannot access offset ''status'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: app/Controllers/Api/HealthCheck.php
+
+		-
+			message: '#^Cannot access offset ''updated_at'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: app/Controllers/Api/HealthCheck.php
+
+		-
+			message: '#^Cannot access offset ''url'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: app/Controllers/Api/HealthCheck.php
+
+		-
+			message: '#^Cannot access offset ''url'' on non\-empty\-array\<int\|string, array\<int\|string, bool\|float\|int\|object\|string\|null\>\|bool\|float\|int\|object\|string\|null\>\|object\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: app/Controllers/Api/HealthCheck.php
+
+		-
+			message: '#^Method App\\Controllers\\Api\\HealthCheck\:\:checkAll\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: app/Controllers/Api/HealthCheck.php
+
+		-
+			message: '#^Method App\\Controllers\\Api\\HealthCheck\:\:checkProject\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: app/Controllers/Api/HealthCheck.php
+
+		-
+			message: '#^Method App\\Controllers\\Api\\HealthCheck\:\:checkProject\(\) has parameter \$projectId with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: app/Controllers/Api/HealthCheck.php
+
+		-
+			message: '#^Method App\\Controllers\\Api\\HealthCheck\:\:checkProjectHealth\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: app/Controllers/Api/HealthCheck.php
+
+		-
+			message: '#^Method App\\Controllers\\Api\\HealthCheck\:\:checkProjectHealth\(\) has parameter \$projectId with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: app/Controllers/Api/HealthCheck.php
+
+		-
+			message: '#^Method App\\Controllers\\Api\\HealthCheck\:\:checkProjectHealth\(\) has parameter \$url with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: app/Controllers/Api/HealthCheck.php
+
+		-
+			message: '#^Method App\\Controllers\\Api\\HealthCheck\:\:getHistory\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: app/Controllers/Api/HealthCheck.php
+
+		-
+			message: '#^Method App\\Controllers\\Api\\HealthCheck\:\:getHistory\(\) has parameter \$projectId with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: app/Controllers/Api/HealthCheck.php
+
+		-
+			message: '#^Parameter \#1 \$data of method CodeIgniter\\RESTful\\ResourceController\:\:respond\(\) expects array\|string\|null, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Controllers/Api/HealthCheck.php
+
+		-
+			message: '#^Parameter \#1 \$hs of method App\\Controllers\\Api\\HealthCheck\:\:translateHealthStatus\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Controllers/Api/HealthCheck.php
+
+		-
+			message: '#^Parameter \#1 \$id of method CodeIgniter\\BaseModel\:\:find\(\) expects array\|int\|string\|null, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Controllers/Api/HealthCheck.php
+
+		-
+			message: '#^Parameter \#1 \$id of method CodeIgniter\\Model\:\:update\(\) expects array\|int\|string\|null, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Controllers/Api/HealthCheck.php
+
+		-
+			message: '#^Parameter \#1 \$row of method CodeIgniter\\Model\:\:insert\(\) expects array\<int\|string, bool\|float\|int\|object\|string\|null\>\|object\|null, array\<string, mixed\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Controllers/Api/HealthCheck.php
+
+		-
+			message: '#^Parameter \#1 \$status of method App\\Controllers\\Api\\HealthCheck\:\:translateStatus\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Controllers/Api/HealthCheck.php
+
+		-
+			message: '#^Parameter \#2 \$datetime of static method DateTime\:\:createFromFormat\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Controllers/Api/HealthCheck.php
+
+		-
+			message: '#^Parameter \#3 \$value of function curl_setopt expects non\-empty\-string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Controllers/Api/HealthCheck.php
+
+		-
+			message: '#^Call to an undefined method CodeIgniter\\HTTP\\CLIRequest\|CodeIgniter\\HTTP\\IncomingRequest\:\:getJSON\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: app/Controllers/Api/Projects.php
+
+		-
+			message: '#^Cannot access offset ''created_at'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: app/Controllers/Api/Projects.php
+
+		-
+			message: '#^Cannot access offset ''description'' on array\|bool\|float\|int\|stdClass\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: app/Controllers/Api/Projects.php
+
+		-
+			message: '#^Cannot access offset ''description'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: app/Controllers/Api/Projects.php
+
+		-
+			message: '#^Cannot access offset ''health_status'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: app/Controllers/Api/Projects.php
+
+		-
+			message: '#^Cannot access offset ''id'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: app/Controllers/Api/Projects.php
+
+		-
+			message: '#^Cannot access offset ''is_primary'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: app/Controllers/Api/Projects.php
+
+		-
+			message: '#^Cannot access offset ''last_check'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: app/Controllers/Api/Projects.php
+
+		-
+			message: '#^Cannot access offset ''name'' on array\|bool\|float\|int\|stdClass\|null\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: app/Controllers/Api/Projects.php
+
+		-
+			message: '#^Cannot access offset ''name'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: app/Controllers/Api/Projects.php
+
+		-
+			message: '#^Cannot access offset ''repository'' on array\|bool\|float\|int\|stdClass\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: app/Controllers/Api/Projects.php
+
+		-
+			message: '#^Cannot access offset ''repository'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: app/Controllers/Api/Projects.php
+
+		-
+			message: '#^Cannot access offset ''response_time'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: app/Controllers/Api/Projects.php
+
+		-
+			message: '#^Cannot access offset ''status'' on array\|bool\|float\|int\|stdClass\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: app/Controllers/Api/Projects.php
+
+		-
+			message: '#^Cannot access offset ''status'' on array\|bool\|float\|int\|stdClass\|null\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: app/Controllers/Api/Projects.php
+
+		-
+			message: '#^Cannot access offset ''status'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: app/Controllers/Api/Projects.php
+
+		-
+			message: '#^Cannot access offset ''technologies'' on array\|bool\|float\|int\|stdClass\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: app/Controllers/Api/Projects.php
+
+		-
+			message: '#^Cannot access offset ''type'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: app/Controllers/Api/Projects.php
+
+		-
+			message: '#^Cannot access offset ''updated_at'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: app/Controllers/Api/Projects.php
+
+		-
+			message: '#^Cannot access offset ''url'' on array\|bool\|float\|int\|stdClass\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: app/Controllers/Api/Projects.php
+
+		-
+			message: '#^Cannot access offset ''url'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: app/Controllers/Api/Projects.php
+
+		-
+			message: '#^Cannot access offset ''version'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: app/Controllers/Api/Projects.php
+
+		-
+			message: '#^Cannot call method delete\(\) on object\|null\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Controllers/Api/Projects.php
+
+		-
+			message: '#^Cannot call method find\(\) on object\|null\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Controllers/Api/Projects.php
+
+		-
+			message: '#^Cannot call method findAll\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Controllers/Api/Projects.php
+
+		-
+			message: '#^Cannot call method getRow\(\) on bool\|CodeIgniter\\Database\\BaseResult\<mixed, mixed\>\|CodeIgniter\\Database\\Query\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Controllers/Api/Projects.php
+
+		-
+			message: '#^Cannot call method insert\(\) on object\|null\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Controllers/Api/Projects.php
+
+		-
+			message: '#^Cannot call method orderBy\(\) on object\|null\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Controllers/Api/Projects.php
+
+		-
+			message: '#^Cannot call method update\(\) on object\|null\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Controllers/Api/Projects.php
+
+		-
+			message: '#^Method App\\Controllers\\Api\\Projects\:\:stats\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: app/Controllers/Api/Projects.php
+
+		-
+			message: '#^Parameter \#1 \$data of method CodeIgniter\\RESTful\\ResourceController\:\:respond\(\) expects array\|string\|null, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Controllers/Api/Projects.php
+
+		-
+			message: '#^Parameter \#1 \$data of method CodeIgniter\\RESTful\\ResourceController\:\:respond\(\) expects array\|string\|null, stdClass\|null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Controllers/Api/Projects.php
+
+		-
+			message: '#^Parameter \#1 \$hs of method App\\Controllers\\Api\\Projects\:\:translateHealthStatus\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Controllers/Api/Projects.php
+
+		-
+			message: '#^Parameter \#1 \$name of method App\\Controllers\\Api\\Projects\:\:translateName\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Controllers/Api/Projects.php
+
+		-
+			message: '#^Parameter \#1 \$row of method CodeIgniter\\Model\:\:insert\(\) expects array\<int\|string, bool\|float\|int\|object\|string\|null\>\|object\|null, array\<string, mixed\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Controllers/Api/Projects.php
+
+		-
+			message: '#^Parameter \#1 \$status of method App\\Controllers\\Api\\Projects\:\:translateStatus\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Controllers/Api/Projects.php
+
+		-
+			message: '#^Call to an undefined method CodeIgniter\\HTTP\\CLIRequest\|CodeIgniter\\HTTP\\IncomingRequest\:\:getJSON\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: app/Controllers/Api/Technologies.php
+
+		-
+			message: '#^Cannot access offset ''id'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: app/Controllers/Api/Technologies.php
+
+		-
+			message: '#^Cannot access offset ''isPrimary'' on array\|bool\|float\|int\|stdClass\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: app/Controllers/Api/Technologies.php
+
+		-
+			message: '#^Cannot access offset ''isPrimary'' on array\|bool\|float\|int\|stdClass\|null\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: app/Controllers/Api/Technologies.php
+
+		-
+			message: '#^Cannot access offset ''is_primary'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: app/Controllers/Api/Technologies.php
+
+		-
+			message: '#^Cannot access offset ''name'' on array\|bool\|float\|int\|stdClass\|null\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: app/Controllers/Api/Technologies.php
+
+		-
+			message: '#^Cannot access offset ''name'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: app/Controllers/Api/Technologies.php
+
+		-
+			message: '#^Cannot access offset ''projectId'' on array\|bool\|float\|int\|stdClass\|null\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: app/Controllers/Api/Technologies.php
+
+		-
+			message: '#^Cannot access offset ''project_id'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: app/Controllers/Api/Technologies.php
+
+		-
+			message: '#^Cannot access offset ''type'' on array\|bool\|float\|int\|stdClass\|null\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: app/Controllers/Api/Technologies.php
+
+		-
+			message: '#^Cannot access offset ''type'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: app/Controllers/Api/Technologies.php
+
+		-
+			message: '#^Cannot access offset ''version'' on array\|bool\|float\|int\|stdClass\|null\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: app/Controllers/Api/Technologies.php
+
+		-
+			message: '#^Cannot access offset ''version'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: app/Controllers/Api/Technologies.php
+
+		-
+			message: '#^Cannot call method delete\(\) on object\|null\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Controllers/Api/Technologies.php
+
+		-
+			message: '#^Cannot call method findAll\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Controllers/Api/Technologies.php
+
+		-
+			message: '#^Cannot call method findAll\(\) on object\|null\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Controllers/Api/Technologies.php
+
+		-
+			message: '#^Cannot call method insert\(\) on object\|null\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Controllers/Api/Technologies.php
+
+		-
+			message: '#^Cannot call method orderBy\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 2
+			path: app/Controllers/Api/Technologies.php
+
+		-
+			message: '#^Cannot call method update\(\) on object\|null\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Controllers/Api/Technologies.php
+
+		-
+			message: '#^Cannot call method where\(\) on object\|null\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Controllers/Api/Technologies.php
+
+		-
+			message: '#^Method App\\Controllers\\Api\\Technologies\:\:getByProject\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: app/Controllers/Api/Technologies.php
+
+		-
+			message: '#^Method App\\Controllers\\Api\\Technologies\:\:getByProject\(\) has parameter \$projectId with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: app/Controllers/Api/Technologies.php
+
+		-
+			message: '#^Parameter \#2 \$array of function array_map expects array, mixed given\.$#'
+			identifier: argument.type
+			count: 2
+			path: app/Controllers/Api/Technologies.php
+
+		-
+			message: '#^Function view not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/Controllers/Home.php
+
+		-
+			message: '#^Method App\\Controllers\\Home\:\:index\(\) should return string but returns mixed\.$#'
+			identifier: return.type
+			count: 1
+			path: app/Controllers/Home.php
+
+		-
+			message: '#^Function view not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/Controllers/Monitoring.php
+
+		-
+			message: '#^Method App\\Controllers\\Monitoring\:\:index\(\) should return string but returns mixed\.$#'
+			identifier: return.type
+			count: 1
+			path: app/Controllers/Monitoring.php
+
+		-
+			message: '#^Function view not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/Controllers/Projects.php
+
+		-
+			message: '#^Method App\\Controllers\\Projects\:\:index\(\) should return string but returns mixed\.$#'
+			identifier: return.type
+			count: 1
+			path: app/Controllers/Projects.php
+
+		-
+			message: '#^Function view not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/Controllers/Settings.php
+
+		-
+			message: '#^Method App\\Controllers\\Settings\:\:index\(\) should return string but returns mixed\.$#'
+			identifier: return.type
+			count: 1
+			path: app/Controllers/Settings.php
+
+		-
+			message: '#^Binary operation "\." between ''ERROR\: '' and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: app/Views/errors/cli/error_404.php
+
+		-
+			message: '#^Parameter \#1 \$text of static method CodeIgniter\\CLI\\CLI\:\:write\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Views/errors/cli/error_404.php
+
+		-
+			message: '#^Variable \$code might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: app/Views/errors/cli/error_404.php
+
+		-
+			message: '#^Variable \$message might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: app/Views/errors/cli/error_404.php
+
+		-
+			message: '#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\.$#'
+			identifier: foreach.nonIterable
+			count: 1
+			path: app/Views/errors/cli/error_exception.php
+
+		-
+			message: '#^Binary operation "\+" between mixed and 1 results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: app/Views/errors/cli/error_exception.php
+
+		-
+			message: '#^Binary operation "\." between ''       '' and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 2
+			path: app/Views/errors/cli/error_exception.php
+
+		-
+			message: '#^Binary operation "\." between ''  '' and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: app/Views/errors/cli/error_exception.php
+
+		-
+			message: '#^Binary operation "\." between ''  \['' and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: app/Views/errors/cli/error_exception.php
+
+		-
+			message: '#^Binary operation "\." between ''\['' and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: app/Views/errors/cli/error_exception.php
+
+		-
+			message: '#^Binary operation "\." between mixed and ''\:'' results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 3
+			path: app/Views/errors/cli/error_exception.php
+
+		-
+			message: '#^Binary operation "\." between non\-falsy\-string and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 5
+			path: app/Views/errors/cli/error_exception.php
+
+		-
+			message: '#^Cannot access constant class on mixed\.$#'
+			identifier: classConstant.nonObject
+			count: 2
+			path: app/Views/errors/cli/error_exception.php
+
+		-
+			message: '#^Cannot access offset ''args'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: app/Views/errors/cli/error_exception.php
+
+		-
+			message: '#^Cannot access offset ''class'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: app/Views/errors/cli/error_exception.php
+
+		-
+			message: '#^Cannot access offset ''file'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: app/Views/errors/cli/error_exception.php
+
+		-
+			message: '#^Cannot access offset ''function'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: app/Views/errors/cli/error_exception.php
+
+		-
+			message: '#^Cannot access offset ''line'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: app/Views/errors/cli/error_exception.php
+
+		-
+			message: '#^Cannot access offset ''type'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: app/Views/errors/cli/error_exception.php
+
+		-
+			message: '#^Cannot call method getFile\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 2
+			path: app/Views/errors/cli/error_exception.php
+
+		-
+			message: '#^Cannot call method getLine\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 2
+			path: app/Views/errors/cli/error_exception.php
+
+		-
+			message: '#^Cannot call method getMessage\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Views/errors/cli/error_exception.php
+
+		-
+			message: '#^Cannot call method getPrevious\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Views/errors/cli/error_exception.php
+
+		-
+			message: '#^Cannot call method getTrace\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Views/errors/cli/error_exception.php
+
+		-
+			message: '#^Function clean_path not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: app/Views/errors/cli/error_exception.php
+
+		-
+			message: '#^Parameter \#1 \$array of function array_values expects array\<T\>, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Views/errors/cli/error_exception.php
+
+		-
+			message: '#^Parameter \#1 \$string of function str_pad expects string, \(float\|int\) given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Views/errors/cli/error_exception.php
+
+		-
+			message: '#^Parameter \#1 \$text of static method CodeIgniter\\CLI\\CLI\:\:write\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Views/errors/cli/error_exception.php
+
+		-
+			message: '#^Right side of && is always true\.$#'
+			identifier: booleanAnd.rightAlwaysTrue
+			count: 1
+			path: app/Views/errors/cli/error_exception.php
+
+		-
+			message: '#^Variable \$exception might not be defined\.$#'
+			identifier: variable.undefined
+			count: 4
+			path: app/Views/errors/cli/error_exception.php
+
+		-
+			message: '#^Variable \$message might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: app/Views/errors/cli/error_exception.php
+
+		-
+			message: '#^Constant ENVIRONMENT not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: app/Views/errors/html/error_400.php
+
+		-
+			message: '#^Function esc not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/Views/errors/html/error_400.php
+
+		-
+			message: '#^Function lang not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: app/Views/errors/html/error_400.php
+
+		-
+			message: '#^Parameter \#1 \$string of function nl2br expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Views/errors/html/error_400.php
+
+		-
+			message: '#^Parameter \#1 \(mixed\) of echo cannot be converted to string\.$#'
+			identifier: echo.nonString
+			count: 2
+			path: app/Views/errors/html/error_400.php
+
+		-
+			message: '#^Variable \$message might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: app/Views/errors/html/error_400.php
+
+		-
+			message: '#^Constant ENVIRONMENT not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: app/Views/errors/html/error_404.php
+
+		-
+			message: '#^Function esc not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/Views/errors/html/error_404.php
+
+		-
+			message: '#^Function lang not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: app/Views/errors/html/error_404.php
+
+		-
+			message: '#^Parameter \#1 \$string of function nl2br expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Views/errors/html/error_404.php
+
+		-
+			message: '#^Parameter \#1 \(mixed\) of echo cannot be converted to string\.$#'
+			identifier: echo.nonString
+			count: 2
+			path: app/Views/errors/html/error_404.php
+
+		-
+			message: '#^Variable \$message might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: app/Views/errors/html/error_404.php
+
+		-
+			message: '#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\.$#'
+			identifier: foreach.nonIterable
+			count: 6
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Binary operation "\+" between mixed and 1 results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 2
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Binary operation "\." between '' \#'' and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 2
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Binary operation "\." between ''include ''\|''include_once ''\|''require ''\|''require_once '' and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Binary operation "\." between mixed and '' '' results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 2
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Binary operation "\." between mixed and '' \- '' results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Binary operation "\." between mixed and '' \: '' results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Binary operation "\." between mixed and ''\:'' results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Binary operation "\." between mixed and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Binary operation "\." between non\-falsy\-string and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 6
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Binary operation "\." between string and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Calling static\:\:describeMemory\(\) outside of class scope\.$#'
+			identifier: outOfClass.static
+			count: 2
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Calling static\:\:highlightFile\(\) outside of class scope\.$#'
+			identifier: outOfClass.static
+			count: 2
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Cannot access constant class on mixed\.$#'
+			identifier: classConstant.nonObject
+			count: 2
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Cannot access offset ''args'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Cannot access offset ''class'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 3
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Cannot access offset ''file'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Cannot access offset ''function'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 6
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Cannot access offset ''line'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Cannot access offset ''type'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Cannot call method getAgentString\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Cannot call method getCode\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 4
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Cannot call method getFile\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Cannot call method getHeaderLine\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Cannot call method getIPAddress\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Cannot call method getLine\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Cannot call method getMessage\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 4
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Cannot call method getMethod\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Cannot call method getPrevious\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Cannot call method getReasonPhrase\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Cannot call method getStatusCode\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Cannot call method getUri\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Cannot call method getUserAgent\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Cannot call method getValueLine\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 2
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Cannot call method headers\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 2
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Cannot call method isAJAX\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Cannot call method isCLI\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Cannot call method isSecure\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Cannot call method setStatusCode\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Constant ENVIRONMENT not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Function clean_path not found\.$#'
+			identifier: function.notFound
+			count: 5
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Function esc not found\.$#'
+			identifier: function.notFound
+			count: 47
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Function service not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Parameter \#1 \$filename of function is_file expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 3
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Parameter \#1 \$function of class ReflectionFunction constructor expects Closure\|string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Parameter \#1 \$haystack of function str_ends_with expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Parameter \#1 \$objectOrMethod of class ReflectionMethod constructor expects object\|string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Parameter \#1 \$string of function nl2br expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 2
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Parameter \#1 \(mixed\) of echo cannot be converted to string\.$#'
+			identifier: echo.nonString
+			count: 44
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Parameter \#2 \$method of class ReflectionMethod constructor expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Parameter \#2 \(mixed\) of echo cannot be converted to string\.$#'
+			identifier: echo.nonString
+			count: 2
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Parameter \#3 \$subject of function preg_replace expects array\<float\|int\|string\>\|string, mixed given\.$#'
+			identifier: argument.type
+			count: 2
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Parameter \#3 \$subject of function preg_replace expects array\<float\|int\|string\>\|string, string\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Part \$key \(mixed\) of encapsed string cannot be cast to string\.$#'
+			identifier: encapsedStringPart.nonString
+			count: 1
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Right side of && is always true\.$#'
+			identifier: booleanAnd.rightAlwaysTrue
+			count: 1
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Variable \$exception might not be defined\.$#'
+			identifier: variable.undefined
+			count: 5
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Variable \$file might not be defined\.$#'
+			identifier: variable.undefined
+			count: 3
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Variable \$line might not be defined\.$#'
+			identifier: variable.undefined
+			count: 2
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Variable \$title might not be defined\.$#'
+			identifier: variable.undefined
+			count: 3
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Variable \$trace might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: app/Views/errors/html/error_exception.php
+
+		-
+			message: '#^Function lang not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: app/Views/errors/html/production.php
+
+		-
+			message: '#^Parameter \#1 \(mixed\) of echo cannot be converted to string\.$#'
+			identifier: echo.nonString
+			count: 3
+			path: app/Views/errors/html/production.php
+
+		-
+			message: '#^Parameter \#3 \$subject of function preg_replace expects array\<float\|int\|string\>\|string, string\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Views/errors/html/production.php
+
+		-
+			message: '#^Function base_url not found\.$#'
+			identifier: function.notFound
+			count: 8
+			path: app/Views/layout/main.php
+
+		-
+			message: '#^Function view not found\.$#'
+			identifier: function.notFound
+			count: 6
+			path: app/Views/layout/main.php
+
+		-
+			message: '#^Parameter \#1 \$string of function rtrim expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Views/layout/main.php
+
+		-
+			message: '#^Parameter \#1 \(mixed\) of echo cannot be converted to string\.$#'
+			identifier: echo.nonString
+			count: 14
+			path: app/Views/layout/main.php
+
+		-
+			message: '#^Function base_url not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: app/Views/pages/dashboard.php
+
+		-
+			message: '#^Parameter \#1 \(mixed\) of echo cannot be converted to string\.$#'
+			identifier: echo.nonString
+			count: 3
+			path: app/Views/pages/dashboard.php
+
+		-
+			message: '#^Function base_url not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: app/Views/pages/monitoring.php
+
+		-
+			message: '#^Parameter \#1 \(mixed\) of echo cannot be converted to string\.$#'
+			identifier: echo.nonString
+			count: 4
+			path: app/Views/pages/monitoring.php
+
+		-
+			message: '#^Constant ENVIRONMENT not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: app/Views/welcome_message.php
+
+		-
+			message: '#^Parameter \#1 \(mixed\) of echo cannot be converted to string\.$#'
+			identifier: echo.nonString
+			count: 1
+			path: app/Views/welcome_message.php
+
+		-
+			message: '#^Cannot call method getResult\(\) on CodeIgniter\\Database\\ResultInterface\|false\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: tests/database/ExampleDatabaseTest.php
+
+		-
+			message: '#^Parameter \#1 \$id of method CodeIgniter\\BaseModel\:\:delete\(\) expects array\|int\|string\|null, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: tests/database/ExampleDatabaseTest.php
+
+		-
+			message: '#^Parameter \#1 \$id of method CodeIgniter\\BaseModel\:\:find\(\) expects array\|int\|string\|null, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: tests/database/ExampleDatabaseTest.php
+
+		-
+			message: '#^Cannot call method get\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: tests/session/ExampleSessionTest.php
+
+		-
+			message: '#^Cannot call method set\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: tests/session/ExampleSessionTest.php
+
+		-
+			message: '#^Function service not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: tests/session/ExampleSessionTest.php
+
+		-
+			message: '#^Binary operation "\." between mixed and ''\.env'' results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 2
+			path: tests/unit/HealthTest.php
+
+		-
+			message: '#^Call to method PHPUnit\\Framework\\Assert\:\:assertTrue\(\) with bool will always evaluate to true\.$#'
+			identifier: method.alreadyNarrowedType
+			count: 1
+			path: tests/unit/HealthTest.php
+
+		-
+			message: '#^Cannot call method check\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 2
+			path: tests/unit/HealthTest.php
+
+		-
+			message: '#^Constant HOMEPATH not found\.$#'
+			identifier: constant.notFound
+			count: 2
+			path: tests/unit/HealthTest.php
+
+		-
+			message: '#^Function service not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: tests/unit/HealthTest.php
+
+		-
+			message: '#^Parameter \#2 \$array of function preg_grep expects array, list\<string\>\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: tests/unit/HealthTest.php

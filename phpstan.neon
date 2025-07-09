@@ -1,0 +1,13 @@
+includes:
+  - vendor/phpstan/phpstan/conf/bleedingEdge.neon
+  - phpstan-baseline.neon
+
+parameters:
+  level: max
+  paths:
+    - app
+    - tests
+
+  # para carregar o autoload do Composer antes da análise:
+  bootstrapFiles:
+    - %rootDir%/../../../vendor/autoload.php

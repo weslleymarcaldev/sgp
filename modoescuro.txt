@@ -1,0 +1,74 @@
+1. Ative o dark mode no Tailwind
+No seu tailwind.config.js, ajuste a propriedade darkMode para usar classe:
+module.exports = {
+  darkMode: 'class', // ou 'media' para usar preferência do sistema
+  content: [
+    './app/Views/**/*.php',
+    './assets/js/**/*.js',
+    // ...
+  ],
+  theme: { /* ... */ },
+  plugins: [ /* ... */ ],
+}
+Isso faz com que, ao adicionar class="dark" num elemento ancestral (normalmente o <html>), todas as classes dark:... entrem em vigor.
+
+2. Atualize suas classes para suportar dark
+Em cada componente, adicione variantes dark: onde quiser cores invertidas. Exemplos:
+<!-- layout/main.php -->
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+  …
+</body>
+Nos cards:
+<div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+  <h3 class="text-gray-800 dark:text-gray-100">Nome do Projeto</h3>
+  <p class="text-gray-600 dark:text-gray-300">Descrição…</p>
+  …
+</div>
+Nos botões:
+<button class="bg-blue-600 hover:bg-blue-700 text-white dark:bg-blue-500 dark:hover:bg-blue-600">
+  Criar
+</button>
+Você pode deixar sua base de estilos (por exemplo em assets/css/custom.css) sem alterações—o Tailwind já vai gerar as regras dark: para as classes usadas.
+
+3. Controle a classe dark via JavaScript
+3.1. Insira um script no <head> para aplicar tema antes do carregamento
+Em layout/main.php, logo após <head>:
+<script>
+  // Aplica tema antes do render
+  if (
+    localStorage.theme === 'dark'
+    || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+  ) {
+    document.documentElement.classList.add('dark')
+  } else {
+    document.documentElement.classList.remove('dark')
+  }
+</script>
+
+3.2. Adicione um botão de toggle
+Por exemplo no cabeçalho (layout/main.php):
+<button id="theme-toggle" class="p-2 rounded">
+  <i data-lucide="sun" class="w-5 h-5 dark:hidden"></i>
+  <i data-lucide="moon" class="w-5 h-5 hidden dark:inline"></i>
+</button>
+
+3.3. Lógica de alternância em app.js
+// logo após inicialização do DOM...
+document.getElementById('theme-toggle').addEventListener('click', () => {
+  const root = document.documentElement;
+  if (root.classList.contains('dark')) {
+    root.classList.remove('dark');
+    localStorage.theme = 'light';
+  } else {
+    root.classList.add('dark');
+    localStorage.theme = 'dark';
+  }
+  lucide.createIcons(); // se mudarem ícones
+});
+Não esqueça de repintar o Lucide (lucide.createIcons()) após trocar o ícone.
+
+4. Reconstrua seu CSS
+Sempre que mudar o tailwind.config.js, rode:
+npm run build:css
+Assim o Tailwind incluirá todas as regras dark:... necessárias.
+

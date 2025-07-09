@@ -1,0 +1,321 @@
+Confirmar se o token JWT está funcionando:
+Faça o login via Postman:
+
+POST http://localhost:8080/api/login
+
+json
+{
+  "email": "admin@exemplo.com",
+  "password": "123456"
+}
+Se tudo funcionar, receberá:
+json
+{
+  "token": "eyJ0eXAiOiJKV1QiLC..."
+}
+
+Activepieces:
+Sim, o workflow será executado somente quando o endpoint configurado /sgp-created for chamado via POST, por exemplo:
+
+curl -X POST http://localhost:3000/api/v1/webhooks/sgp-created \
+-H "Content-Type: application/json" \
+-d '{
+  "name": "SGP",
+  "version": "1.0.0",
+  "status": "active",
+  "url": "http://localhost:8080"
+}'
+
+
+✅ 1. Dê permissão de execução
+No terminal, dentro da raiz do projeto (onde o setup.sh está salvo):
+chmod +x setup.sh
+Esse comando garante que o script possa ser executado como um programa.
+
+✅ 2. Execute o script com o comando desejado
+
+./setup.sh install      # Instala dependências do backend e frontend
+./setup.sh build        # Builda os containers
+./setup.sh up           # Sobe os containers
+./setup.sh migrate      # Roda migrations via spark
+./setup.sh logs         # Ver logs dos serviços
+
+Subir os containers em background:
+./setup.sh up
+
+(Opcional) Rodar as migrations:
+./setup.sh migrate
+
+Acompanhar logs
+./setup.sh logs
+
+Veja os logs do front e confirme que o Vite subiu sem erro
+./setup.sh logs -f frontend
+
+Usando seu setup.sh
+# 1) Derruba os containers e a rede
+./setup.sh down
+
+# 2) Rebuilda as imagens (backend + frontend)
+./setup.sh build
+
+# 3) Sobe tudo de volta, em background
+./setup.sh up
+
+Se você quiser que suba já em background (“-d”), basta trocar o último comando para:
+./setup.sh up -d
+
+2) Direto pelo Docker Compose
+# Para parar e remover tudo (containers, rede e volumes anônimos)
+docker-compose -p sgp down
+
+# Rebuild + recreate forçado, sem cache
+docker-compose -p sgp up -d --build --force-recreate
+
+Se você também quiser limpar volumes persistentes (atenção: vai apagar bancos, etc):
+docker-compose -p sgp down -v
+docker-compose -p sgp up -d --build --force-recreate
+
+# desliga tudo
+docker-compose -p sgp down
+
+# recompila sem cache (ou só o frontend)
+docker-compose -p sgp build --no-cache frontend
+
+# sobe
+docker-compose -p sgp up -d
+Ou, se quiser forçar todos:
+
+bash
+Copiar código
+docker-compose -p sgp up -d --build --force-recreate
+
+### Para rodar um seeder no CodeIgniter 4, você usa o comando:
+
+php spark db:seed NomeDoSeeder
+Por exemplo, se você tiver criado um ProjectSeeder em app/Database/Seeds/ProjectSeeder.php, basta:
+
+php spark db:seed ProjectSeeder
+Como você está rodando tudo em containers Docker, dentro do container do backend ficaria assim:
+docker exec -it sgp-backend-1 php spark db:seed ProjectSeeder
+
+Se quiser adicionar isso ao seu setup.sh, pode criar um caso “seed”:
+seed)
+  echo "🐣 Rodando seeders..."
+  docker exec -it $BACKEND_CONTAINER php spark db:seed ProjectSeeder
+  ;;
+
+Assim, você só chama:
+./setup.sh seed
+
+
+Para copiar manualmente o que você gerou em
+backend/app/Views/assets/dist/assets
+
+para a pasta que o Apache realmente serve em
+backend/public/assets
+
+cp -R backend/app/Views/assets/dist/assets/* backend/public/assets/
+
+Resumão
+
+Dev
+cd backend/app/Views/assets
+npm run dev
+# → abra http://localhost:5173
+
+Produção
+cd backend/app/Views/assets
+npm run build
+# → isso gera dist/ + roda postbuild que copia para backend/public/assets
+docker-compose -p sgp build backend
+docker-compose -p sgp up -d
+# → abra http://localhost:8080
+
+
+#Gerar o esqueleto CI4 em uma pasta temporária 
+e copiar apenas o conteúdo e preservando os arquivos 
+Docker e o setup.sh
+
+composer create-project codeigniter4/appstarter ci4-temp --no-dev
+cp -r ci4-temp/. ./
+rm -rf ci4-temp
+
+
+chmod +x setup.sh
+./setup.sh install
+./setup.sh up
+
+
+#Conjunto de comandos para descobrir todas as versões e libs que seu projeto está usando. Por exemplo, no root do seu projeto:
+
+# 1) Versão do PHP e extensões
+php -v
+php -m
+
+# 2) Versão do CodeIgniter (CLI)
+php spark --version
+
+# 3) Dependências PHP instaladas e suas versões
+composer show
+
+# 4) Versão do Node.js / npm
+node -v
+npm -v
+
+# 5) Pacotes front-end (Tailwind, autoprefixer, etc.)
+npm list --depth=0
+
+# 6) Versão do Tailwind CLI
+npx tailwindcss --version
+
+# 7) Versão do jQuery (se não estiver no package.json, cheque no node_modules ou no seu código)
+grep '"jquery"' package.json
+
+# 8) Imagens Docker e tags usadas
+docker-compose images
+
+# 9) Versão do MySQL dentro do container
+docker exec -it banco mysql --version
+
+
+#Listagem automática, pode criar um script info.sh:
+
+#!/usr/bin/env bash
+echo "PHP:"     && php -v
+echo "CI4 CLI:" && php spark --version
+echo
+echo "Composer deps:" 
+composer show --no-ansi
+echo
+echo "Node/NPM:" && node -v && npm -v
+echo "Front-end deps:" 
+npm list --depth=0 --no-ansi
+echo "Tailwind CLI:" 
+npx tailwindcss --version
+echo
+echo "Docker images:"
+docker-compose images
+echo
+echo "MySQL version:"
+docker exec -i banco mysql --version
+
+#Dê permissão e execute:
+chmod +x info.sh
+./info.sh
+
+#Linters e fixers automáticos
+Se você quiser uma ferramenta que corrija estilo e potenciais bugs em PHP ou JS, normalmente instala um pacote de análise estática:
+
+PHP-CS-Fixer (para estilo PHP/PSR12):
+composer require --dev friendsofphp/php-cs-fixer
+vendor/bin/php-cs-fixer fix
+
+PHPCS + PHPCBF (PSR12):
+composer require --dev squizlabs/php_codesniffer
+vendor/bin/phpcs --standard=PSR12 app/     # só reporta
+vendor/bin/phpcbf --standard=PSR12 app/   # corrige o que pode
+
+ESLint (para seu app.js):
+npm install --save-dev eslint
+npx eslint "public/assets/js/**/*.js" --fix
+
+
+#Varredura automática de erros e correção de estilo
+Você já instalou o PHP-CS-Fixer, que faz a correção 
+automática de estilo de código segundo regras definidas:
+
+Certifique-se de ter um arquivo ​.php-cs-fixer.php​ na raiz (como mostramos).
+
+Execute:
+vendor/bin/php-cs-fixer fix
+Isso varre todo o seu app/, public/, tests/ (conforme seu config) e aplica as regras (PSR-12, arrays curtos, imports ordenados…).
+
+1 - Para ver o que mudaria, sem aplicar:
+vendor/bin/php-cs-fixer fix --dry-run --diff
+2 - Executando o Fixer:
+Depois de criado o .php-cs-fixer.php, basta:
+vendor/bin/php-cs-fixer fix
+3 - Só ver o que mudaria, sem aplicar:
+vendor/bin/php-cs-fixer fix --dry-run --diff
+4 - invocar sem config
+Se, por enquanto, você só quer consertar tudo de app/ sem criar o arquivo:
+vendor/bin/php-cs-fixer fix app --rules=@PSR12
+Ou, para múltiplas pastas:
+vendor/bin/php-cs-fixer fix app tests public --rules=@PSR12,array_syntax=[syntax=short]
+
+#Detectar erros (tipos inválidos, chamadas a métodos inexistentes, etc.), recomendo adicionar um analisador estático como o PHPStan:
+
+composer require --dev phpstan/phpstan
+vendor/bin/phpstan analyse --level=max app tests
+
+Resumo
+# 1) Limpar cache do CI4
+php spark cache:clear
+
+# 2) Formatar/corrigir estilo de código
+vendor/bin/php-cs-fixer fix
+
+# 3) Só mostrar diffs, sem alterar
+vendor/bin/php-cs-fixer fix --dry-run --diff
+
+# 4) Análise estática (detecção de erros)
+composer require --dev phpstan/phpstan
+vendor/bin/phpstan analyse --level=max app tests
+
+
+====================================================
+
+#Integração contínua (CI)
+Adicione ao seu pipeline de CI (GitHub Actions, GitLab CI, etc.) um job que execute, antes dos testes:
+- name: Check coding style
+  run: vendor/bin/php-cs-fixer fix --dry-run --diff
+Assim qualquer quebra de padrão já será detectada automaticamente.
+
+Hook de pré-commit
+Para evitar commits fora de padrão, use um hook Git (com husky ou simples pre-commit em .git/hooks) que rode:
+vendor/bin/php-cs-fixer fix
+e impeça o commit se houver diffs pendentes.
+
+Análise estática de erros
+O PHP-CS-Fixer cuida só de estilo. Para detectar problemas de tipos, chamadas a métodos inexistentes, vazamentos de variável, etc., instale e rode o PHPStan:
+
+composer require --dev phpstan/phpstan
+vendor/bin/phpstan analyse --level=max app
+
+Ou o Psalm:
+composer require --dev vimeo/psalm
+vendor/bin/psalm --init
+vendor/bin/psalm
+
+Automatizar com Composer
+No seu composer.json dê um alias para rodar tudo junto:
+{
+  "scripts": {
+    "cs": "php-cs-fixer fix",
+    "cs-check": "php-cs-fixer fix --dry-run --diff",
+    "static": "phpstan analyse --level=7 app",
+    "test": [
+      "@static",
+      "phpunit"
+    ]
+  }
+}
+Aí basta composer cs ou composer cs-check para checar, e composer test para rodar análise estática + testes.
+
+Com isso seu fluxo de desenvolvimento fica:
+composer install
+composer cs (auto-corrige)
+composer cs-check (verifica sem alterar)
+composer static (detecta erros de tipo)
+composer test (executa toda a suíte)
+
+============================================================
+# O que cada bloco phpstan.neon fazem no comando vendor/bin/phpstan analyse?
+1 - memoryLimit: garante que o PHPStan tenha RAM suficiente (muito comum em níveis altos ou codebases grandes).
+2 - baseline: permite rodar phpstan analyse --generate-baseline uma vez, e depois ignorar tudo que foi listado ali. Bom para gradualmente adotar o PHPStan.
+3 - autoload_files / bootstrapFiles: indicam ao PHPStan onde encontrar sua lógica de carregamento, constantes, helpers etc.
+4 - excludes_analyse: evita analisar migrations, seeds, views — pastas que normalmente não valem o esforço de tipagem estática.
+5 - reportUnmatchedIgnoreErrors: quando você insere comentários // @phpstan-ignore-next-line, isso impede que avisos “não encontrados” explodam sua build.
+6 - checkMissingIterableValueType e checkMissingVarTagType: desativa alguns checks muito doloridos (você pode ligá-los conforme for ajustando seu código).
+
